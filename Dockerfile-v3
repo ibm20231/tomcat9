@@ -16,11 +16,11 @@ RUN chmod 777 *
 ########################   Added V2 ###################
 WORKDIR /opt/apache-tomcat-9.0.87/webapps/host-manager/META-INF
 RUN rm -rf context.xml && \
-wget https://github.com/ibm20231/tomcat9/blob/main/context.xml
+wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/context.xml
 WORKDIR /opt/apache-tomcat-9.0.86/webapps/manager/META-INF
 RUN rm -rf context.xml && \
-wget https://github.com/ibm20231/tomcat9/blob/main/context.xml
+wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/context.xml
 WORKDIR /opt/apache-tomcat-9.0.87/conf
 RUN rm -rf tomcat-users.xml && \
-wget https://github.com/ibm20231/tomcat9/blob/main/tomcat-users.xml
+wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/tomcat-users.xml
 CMD ["/opt/apache-tomcat-9.0.87/bin/catalina.sh", "run"]
