@@ -17,7 +17,7 @@ RUN chmod 777 *
 WORKDIR /opt/apache-tomcat-9.0.87/webapps/host-manager/META-INF
 RUN rm -rf context.xml && \
 wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/context.xml
-WORKDIR /opt/apache-tomcat-9.0.86/webapps/manager/META-INF
+WORKDIR /opt/apache-tomcat-9.0.87/webapps/manager/META-INF
 RUN rm -rf context.xml && \
 wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/context.xml
 WORKDIR /opt/apache-tomcat-9.0.87/conf
