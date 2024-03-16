@@ -13,7 +13,6 @@ RUN wget https://github.com/ibm20231/tomcat9/raw/main/session.war
 EXPOSE 8080
 WORKDIR /opt/apache-tomcat-9.0.87/bin
 RUN chmod 777 *
-########################   Added V2 ###################
 WORKDIR /opt/apache-tomcat-9.0.87/webapps/host-manager/META-INF
 RUN rm -rf context.xml && \
 wget https://raw.githubusercontent.com/ibm20231/tomcat9/main/context.xml
