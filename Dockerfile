@@ -1,6 +1,6 @@
 FROM centos:7
 WORKDIR /opt/
-#Updated tomcat archive site 
+#Updated tomcat archive site and Version Changed 
 ADD https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.87/bin/apache-tomcat-9.0.87.tar.gz .
 #Installing openjdk 11
 RUN yum install java-11-openjdk-devel wget -y && \
@@ -9,6 +9,7 @@ RUN yum install java-11-openjdk-devel wget -y && \
    ln -sf "/usr/share/zoneinfo/Asia/Kolkata" /etc/localtime && \
    rm -rf apache-tomcat-9.0.87.tar.gz
 WORKDIR /opt/apache-tomcat-9.0.87/webapps
+#Download file from github repo
 RUN wget https://github.com/ibm20231/tomcat9/raw/main/session.war
 EXPOSE 8080
 WORKDIR /opt/apache-tomcat-9.0.87/bin
