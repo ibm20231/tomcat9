@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource name="jms/QCF" auth="Container" type="com.ibm.mq.jms.MQQueueConnectionFactory" factory="com.ibm.mq.jms.MQQueueConnectionFactoryFactory"
+    description="JMS Queue Connection Factory for sending messages" HOST="${HOSTNAME}"  PORT="1414" CHANNEL="DEV.APP.SVRCONN"
+        TRAN="1" QMGR="Tomcat9QM"/>
+
+<Resource  name="jms/Queue" auth="Container" type="com.ibm.mq.jms.MQQueue" factory="com.ibm.mq.jms.MQQueueFactory" description="JMS Queue for receiving messages from Dialog"
+        QU="DEV.QUEUE.1"/>
+  </Context>
